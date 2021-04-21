@@ -29,8 +29,6 @@ namespace workManager.Droid
         public override Result DoWork()
         {
             Log.Debug(TAG, "Started.");
-            
-            //Toast.MakeText(context, "Start Greetings from our First Service", ToastLength.Long).Show();
             //Perform a process here, simulated by sleeping for 5 seconds.
 
             Thread.Sleep(5000);
@@ -46,7 +44,7 @@ namespace workManager.Droid
     public class simpleWorkerCall : IsimpleWorkerCall
     {
         private static Context context = global::Android.App.Application.Context;
-        public void hh()
+        public void simpleWrk()
         {
             var simpleWorkerRequest = new OneTimeWorkRequest.Builder(typeof(SimpleWorker))
             .AddTag(SimpleWorker.TAG)

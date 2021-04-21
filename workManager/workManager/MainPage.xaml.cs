@@ -17,12 +17,21 @@ namespace workManager
 
         private void Worker_Clicked(object sender, EventArgs e)
         {
-            DependencyService.Get<IsimpleWorkerCall>().hh();
+            DependencyService.Get<IsimpleWorkerCall>().simpleWrk();
+        }
+
+        private void Listener_Worker_Clicked(object sender, EventArgs e)
+        {
+            DependencyService.Get<ISimpleListenableWorkerCall>().SimpleListenableWrk();
         }
     }
 
     public interface IsimpleWorkerCall
     {
-        void hh();
+        void simpleWrk();
+    }
+    public interface ISimpleListenableWorkerCall
+    {
+        void SimpleListenableWrk();
     }
 }
